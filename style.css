@@ -1,0 +1,278 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+p, h1{
+    direction: rtl;
+}
+body{
+    background-color: #000;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    border-bottom: #00a solid 2px;
+    align-items: center;
+    margin-bottom: 3%;
+}
+@media (max-height: 850px) {
+    header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+.logo{
+    color: #00a;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 900;
+    justify-content: center;
+    padding-bottom: 10px;
+    cursor: default;
+    text-decoration: none;
+}
+.mainnav{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 10px 0px;
+}
+.mainnav a{
+    width: 75px;
+    margin: 0px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #222;
+    background-color: #335;
+    border-radius: 10px;
+    padding: 2px 5px;
+    transition: 0.5s;
+    text-align: center;
+}
+.mainnav a:hover{
+    color: #000;
+    background-color: #224;
+}
+@media (max-width: 500px) {
+    .mainnav a{
+        margin: 0px 5px;
+        width: 60px;
+        font-size: 1em;
+    }
+    .logo{
+        font-size: 1.8em;
+    }
+}
+.content{
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+}
+.section{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+    padding-bottom: 20px;
+    background-color: #333;
+}
+.sectionName{
+    font-size: 2em;
+    margin-bottom: 20px
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+    padding-bottom: 20px;
+    background-color: #333;
+    padding-bottom: 30px;
+}
+.main h1{
+    color: #111;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    background-color: #000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    margin: 0px 10px 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+@media(max-width: 400px){
+    .card{
+        width: 270px;
+        height: 360px;
+    }
+}
+@media(max-width: 350px){
+    .card{
+        width: 220px;
+        height: 320px;
+    }
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card .card-head{
+    width: 100%;
+    height: 80%;
+}
+.img{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    transition: .5s;
+}
+.img img{
+    width: 100%;
+    height: auto;
+}
+.projectName{
+    color: #00f;
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 1px #00a solid;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 0 10px;
+}
+.projectDetails{
+    padding: 5px;
+    width: 100%;
+    color: #00f;
+    font-size: 1.1em;
+    text-align: center;
+    word-spacing: 1px;
+    cursor: default;
+    line-height: 25px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+}
+.projectPopup{
+    border-radius: 10px;
+}
+.projectPopupBody{
+    width: 500px;
+    height: 300px;
+    display: flex;
+}
+@media(max-width: 500px){
+    .projectPopupBody{
+        width: 100%;
+        height: 300px;
+    }
+    .projectPopup{
+        width: 100vw;
+    }
+}
+.projectPopupDescription{
+    flex-basis: 40%;
+    height: 100%;
+    color: #00f;
+    border-right: 2px #007 solid;
+    text-align: center;
+    padding: 5px;
+    overflow: auto;
+}
+.projectPopupName{
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007;
+}
+.projectPopupDetails{
+    font-size: 20px;
+}
+@media(max-width: 400px){
+    .projectPopupName{
+        font-size: 20px;
+    }
+    .projectPopupDetails{
+        font-size: 15px;
+    }
+}
+.projectPopupImg{
+    padding: 5px;
+    flex-basis: 60%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.projectPopupImg img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+.visitSite{
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 35px;
+    background-color: #02a;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    color: #fff;
+    transition: .3s;
+}
+.visitSite:hover{
+    background-color: #04f;
+}
+#about p{
+    padding: 10px;
+    text-align: center;
+    max-width: 750px;
+    color: #151515;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    line-height: 30px;
+}
+#contact span{
+    color: #151515;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+#contact nav{
+    display: flex;
+    justify-content: center;
+    background-color: #282828;
+}
+#contact a{
+    text-decoration: none;
+    margin: 10px 20px;
+    color: #000;
+    transition: .5s;
+}
+#contact a:hover{
+    color: #fff;
+}
